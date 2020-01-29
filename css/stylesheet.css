@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css?family=Orpheus");
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.intro {
+    background-image: url(/img/Image.JPG);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: table;
+    top: 0;
+    background-size: cover;
+}
+
+body {
+    background: #F0F8EA;
+    font-family: "Times New Roman, Orpheus"
+}
+
+.container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    background: black;
+    color: #EBEBD3;
+    padding: 1em 0;
+    width: 100vw;
+
+
+
+}
+
+header::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.logo {
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+    font-size: 1rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.logo span {
+    font-weight: 400;
+}
+
+.site-nav {
+    flex: 1;
+    background: #696867;
+    transition: clip-path ease-in-out 700ms;
+}
+
+.site-nav--open {
+    clip-path: circle(0% at top right);
+    display: none;
+
+}
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.site-nav li {
+    border-bottom: 1px solid #575766;
+    height: 20%;
+}
+
+.site-nav li:last-child {
+    border-bottom: none;
+}
+
+.site-nav a {
+    color: #EBEBD3;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-left: 45vw;
+    padding-right: 45vw;
+    height: 20vh;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+    background: #E4B363;
+    color: #464655;
+}
+
+.site-nav--icon {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 1em;
+    width: 10em;
+    height: 7.9vh;
+    text-align: right;
+    color: #A9A7A2;
+}
+
+.menu-toggle {
+    padding: 1em;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    background: #A9A7A2;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.open .hamburger {
+    transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+    opacity: 0;
+}
+
+.open .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg);
+}
+
+
+
+.intro {
+    background-image: url(/img/Image.JPG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content {
+    color: white;
+    text-align: center;
+    font-family: "Orpheus";
+    font-size: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+
+    background: #696867;
+    width: 200px;
+
+
+}
+
+.button a {
+    border: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+}
+
+.button h2 {
+    font-size: 0.5em;
+}
+
+.content h1 {
+    font-weight: normal;
+}
+
+.navContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.auto {
+    height: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.hide ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hide li {
+    list-style-type: none;
+}
+
+@media (min-width: 700px) {
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .hide {
+        display: block
+    }
+
+    .navContainer {
+        height: 0px;
+    }
+
+    .site-nav {
+        display: none;
+    }
+
+    .site-nav {
+        height: auto;
+        position: relative;
+        background: transparent;
+        float: right;
+        clip-path: initial;
+    }
+
+    .site-nav li {
+        display: inline-block;
+        border: none;
+    }
+
+    .site-nav a {
+        padding: 0;
+        margin-left: 3em;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus {
+        background: transparent;
+    }
+
+    .site-nav--icon {
+        display: none;
+    }
+
+}
